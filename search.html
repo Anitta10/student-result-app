@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+<h2>Search Student Result</h2>
+<form method="post">
+  Enter Roll No: <input name="roll">
+  <button type="submit">Search</button>
+</form>
+
+{% if student %}
+  <h3>Name: {{student[1]}}</h3>
+  <p>Marks: {{student[3]}}, {{student[4]}}, {{student[5]}}</p>
+{% elif student is not none %}
+  <p>No student found!</p>
+{% endif %}
+</div>
+    </div>
+</body>
+</html>

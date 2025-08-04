@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Edit Student</h2>
+            </div>
+            <form method="post">   
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input name="name" class="form-control" value="{{student[1]}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Roll No:</label>
+                    <input name="roll" class="form-control" value="{{student[2]}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject 1:</label>
+                    <input name="subject1" class="form-control" type="number" value="{{student[3]}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject 2:</label>
+                    <input name="subject2" class="form-control" type="number" value="{{student[4]}}" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject 3:</label>
+                    <input name="subject3" class="form-control" type="number" value="{{student[5]}}" required>
+                </div>
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="/dashboard" class="btn btn-primary">Back to Dashboard</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
